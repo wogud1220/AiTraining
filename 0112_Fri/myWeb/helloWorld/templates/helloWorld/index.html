@@ -1,0 +1,14 @@
+{% if logIn == True%}
+<h1>{{name}}님 환영합니다.</h1>
+{%else%}
+<h2>방문자님 환영합니다.</h2>
+{%endif %}
+
+
+<form action="{% url 'gugu' %}" method = "post">
+   <!-- 데이터가 도중에 3자의 사이트에 들려서 기록을 해서 해킹됨, 그거 막음 -->
+    {% csrf_token %}
+    <label for ="userNum"> 알고 싶은 구구단:</label>
+    <input type="text" name="userNum" id="userNum">
+    <input type="submit" value="확인">
+</form>

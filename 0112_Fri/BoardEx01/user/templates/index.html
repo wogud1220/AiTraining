@@ -1,0 +1,13 @@
+<h1>로그인 화면</h1>
+
+    <a href="{% url 'index' %}">로그인</a>
+    <a href="{% url 'register' %}">회원가입</a>
+
+
+<form action = "{% url 'auth' %}" method = 'post'>
+    {% csrf_token %}
+    <input type="text" name ="username" id="username">
+    <input type="text" name ="password" id="password">
+    <input type="submit" value="로그인">
+</form>
+
