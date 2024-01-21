@@ -2,14 +2,16 @@
 
 <html>
 <head>
-    <title>${boardDTO.id}번 게시글</title>
+    <title>게시글 수정</title>
 </head>
 <body>
-<h1>제목: ${boardDTO.title}</h1><br/>
-<h1>작성자:${boardDTO.nickname}</h1><br/>
-<h1>작성시간: ${boardDTO.entryDate}</h1><br/>
-<h1>수정시간 ${boardDTO.modifyDate}</h1><br/>
-<h2>==========================</h2><br/>
-<h1>${boardDTO.content}</h1>
+<form action="/board/update/${boardDTO.id}" method="post">
+    제목:<input type="text" name="title" value="${boardDTO.title}">
+    내용:<input type="text" name="content" value="${boardDTO.content}">
+    <input type="submit" value="수정하기">
+
+
+</form>
+
 </body>
 </html>

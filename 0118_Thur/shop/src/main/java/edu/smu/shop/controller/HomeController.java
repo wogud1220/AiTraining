@@ -1,4 +1,4 @@
-package edu.smu.shop;
+package edu.smu.shop.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

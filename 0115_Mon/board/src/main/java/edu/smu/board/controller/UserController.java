@@ -2,6 +2,7 @@ package edu.smu.board.controller;
 
 import edu.smu.board.model.UserDTO;
 import edu.smu.board.service.UserService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,18 +17,28 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
+
     @PostMapping("auth")
-    public String auth(UserDTO temp){
+    public String auth(HttpSession session, UserDTO temp){
         UserDTO result = userService.auth(temp);
-        System.out.println(result);
+        if(result !=null){
+            session.setAttribute("logIn",result);
+            return "redirect:/board/showAll";
+        }
+        else{
 
         return "redirect:/";
     }
+    }
     @GetMapping("register")
+
     public String showRegister(){
         return "user/register";
     }
+
     @PostMapping("register")
+
     public String register(Model model, UserDTO temp){
         System.out.println("temp: "+temp);
     if(userService.validate(temp)){

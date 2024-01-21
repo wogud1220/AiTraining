@@ -42,3 +42,10 @@ def gugugu(request):
         'userNum': request.POST['userNum'],
     })
 
+def bye(request):
+    return HttpResponse("World!")
+
+def bye2(request):
+    name= request.POST['name']
+    result = name + "님, 환영합니다.!! by python"
+    return HttpResponse(result)

@@ -6,19 +6,49 @@
     <title>
         쇼핑몰 홈페이지
     </title>
+    <form>
+        <div class="row align-items-center">
+            <div class="col-auto mr-auto">
+                <a href="/" class="btn btn-outline-success">홈으로 이동</a>
+            </div>
+            <div class="col-auto mr-auto">
+                <input type="submit" value="Login" class="btn btn-outline-success">
+            </div>
+            <div class="col-auto mr-auto">
+                <a href="/user/register" class="btn btn-outline-info">Sign up</a>
+            </div>
+        </div>
+    </form>
 </head>
 <body>
-<h1>쇼핑몰 홈페이지.</h1>
 
 
-<form>
-<div class="row justify-content-center">
-    <div class="col-4">
-        <input type="submit" value="로그인" class="btn btn-outline-success">
-    </div>
-    <div class="col-3">
-        <a href="/user/register" class="btn btn-outline-info">회원 가입</a>
-    </div>
+<br>
+<br>
+
+<p>
+<a href="https://www.mujikorea.net/display/showDisplay.lecs?goodsNo=MJ31154266&displayNo=MJ1A01A08A01" target="_self">
+    <img src="resources/logo.jpeg" height="200" width="200">
+</a>
+<a href="https://m.naturestore.co.kr/goods/goods_view.php?goodsNo=1000004221" target="_self">
+    <img src="resources/logo2.jpeg" height="200" width="200">
+</a>
+
+<a href="https://m.ozkiz.com/product/detail.html?product_no=4811" target="_self">
+    <img src="resources/logo3.jpeg" height="200" width="200">
+</a>
+
+<a href="https://www.ssg.com/item/itemView.ssg?itemId=1000566204262"target="_self">
+    <img class="padding" src="resources/logo4.jpeg" height="200" width="200">
+    노스페이스 패딩</a>
+
+
+<div class="col-3">
+    <a href="/user/register" class="btn btn-outline-info" target="_self">회원 가입</a>
 </div>
-</form>
+</p>
+</div>
+
+
+
 </body>

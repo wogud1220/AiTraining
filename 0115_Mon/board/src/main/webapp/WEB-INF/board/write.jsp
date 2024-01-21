@@ -3,15 +3,14 @@
 
 <html>
 <head>
-    <title>회원가입</title>
+    <title>글 쓰기</title>
 </head>
 <body>
-<h1>${message}</h1>
-<form action="/user/register" method="post">
-    아이디:<input type="text" name="username" value="${temp.username}"><br/>
-    비밀번호:<input type="text" name="password"><br/>
-    닉네임:<input type="text" name="nickname" value="${temp.nickname}"><br/>
-    <input type="submit" value="회원가입">
+<form action="/board/write" method="POST">
+    제목: <input type="text" name="title">
+    내용: <input type="text" name="content">
+    <input type="submit" value="작성하기">
 </form>
+
 </body>
 </html>
